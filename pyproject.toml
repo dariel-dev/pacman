@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pacman-42"
+version = "1.0.0"
+description = "A compact, faithful Pac-Man recreation for the 42 curriculum."
+requires-python = ">=3.10"
+dependencies = ["pygame>=2.5"]
+
+# The game is launched from source as `python3 pac-man.py config.json`
+# (see the Makefile); the thin `pac-man.py` entry point drives the modular
+# `pacman` package shipped below. For distribution on a public gaming platform
+# (itch.io / Steam) a standalone executable is produced with `./build.sh`
+# (PyInstaller). The package is shipped in the sdist/wheel so it can be
+# regenerated during peer review.
+[tool.setuptools]
+packages = ["pacman"]
+py-modules = ["pac-man"]
+
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true
+exclude = "mazegenerator-00001-py3-none-any"

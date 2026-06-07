@@ -1,0 +1,33 @@
+{
+    # ---- Pac-Man configuration (JSON with # / // / C-style comments) ----
+    // File where the persistent top-10 highscores are stored.
+    "highscore_filename": "highscores.json",
+
+    # Starting lives, fixed maze seed for level 1, and per-level time limit (s).
+    "lives": 3,
+    "seed": 42,
+    "level_max_time": 90,
+
+    /* Scoring: pacgum (X), super-pacgum (Y) and edible ghost (Z) points. */
+    "pacgum": 42,
+    "points_per_pacgum": 10,
+    "points_per_super_pacgum": 50,
+    "points_per_ghost": 200,
+
+    # Levels: each entry sets the maze size (cells). At least 10 levels are
+    # always played; missing entries fall back to a 15x15 maze. Dimensions are
+    # clamped to 17: the assigned maze generator slows down steeply and can
+    # hang on larger mazes, so sizes are kept in its fast, reliable range.
+    "level": [
+        {"width": 15, "height": 15},
+        {"width": 15, "height": 17},
+        {"width": 17, "height": 15},
+        {"width": 17, "height": 17},
+        {"width": 15, "height": 17},
+        {"width": 17, "height": 15},
+        {"width": 17, "height": 17},
+        {"width": 15, "height": 15},
+        {"width": 17, "height": 17},
+        {"width": 17, "height": 17}
+    ]
+}
