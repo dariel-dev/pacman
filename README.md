@@ -6,7 +6,6 @@ A Python recreation of the classic Pac-Man arcade game, built with **Pygame** an
 
 The player navigates increasingly large mazes, collects pacgums and bonus items, avoids four ghosts, and tries to achieve a place in the persistent top-10 high-score table.
 
-**Project page:** https://danjel42.itch.io/pacman-42
 
 ## Screenshots
 
